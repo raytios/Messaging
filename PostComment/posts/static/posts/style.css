@@ -1,0 +1,20 @@
+body{
+    background: white url("images/white.jpg");
+}
+
+.navbar{
+    border-radius: 0;
+}
+
+.navbar-brand{
+    font-family: 'Permanent Marker', cursive;
+}
+
+h1{
+    color : #4169E1;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
