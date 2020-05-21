@@ -4,9 +4,9 @@ from django.urls import reverse
 
 # Create your models here.
 
-class Post(models.Model):
+class Collaborate_Messaging_A00(models.Model):
 
-    messageId = models.AutoField(db_column = 'Collaborate_Messaging_A00_Rec',primary_key=True)
+    Collaborate_Messaging_A00_Rec = models.AutoField(primary_key=True)
     POST ='POST'
     REPLY='REPLY'
     MESSAGE_TYPE_CHOICES = [
@@ -15,17 +15,17 @@ class Post(models.Model):
 
     ]
     messageType = models.CharField(max_length=10, choices= MESSAGE_TYPE_CHOICES, default=POST, db_column='Message_Type')
-    parentPostId = models.ForeignKey('posts.Post', on_delete=models.SET_NULL, null=True, blank=True)
+    parentPostId = models.ForeignKey('posts.Collaborate_Messaging_A00', on_delete=models.SET_NULL, null=True, blank=True)
     message = models.TextField()
     dateTimeStamp = models.DateTimeField(auto_now=True, auto_created=True)
 
     def __str__(self):
-        return 'Collaborate_Messaging_A00_' + str(self.messageId)
+        return 'Collaborate_Messaging_A00_Rec' + str(self.Collaborate_Messaging_A00_Rec)
 
     def get_absolute_url(self):
-        return reverse("detail", kwargs={"messageId": self.messageId})
+        return reverse("detail", kwargs={"Collaborate_Messaging_A00_Rec": self.Collaborate_Messaging_A00_Rec})
 
-
+"""
 class Employee(models.Model):
     user = models.ForeignKey(User, default=1, on_delete=models.CASCADE,)
     employee_no = models.IntegerField()
@@ -37,7 +37,7 @@ class Employee(models.Model):
     def __str__(self):
         return self.first_name + '   ' + self.last_name
 
-
+"""
 
 
 

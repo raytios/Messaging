@@ -11,14 +11,14 @@
         <div class="col-sm-4 col-md-90">
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <a href="{% url 'posts:detail' post.messageId %}"></a>
+                    <a href="{% url 'posts:detail' post.Collaborate_Messaging_A00_Rec %}"></a>
                     <h1>{{ post.message }}</h1>
                     <h4> {{ post.messageType }}</h4>
                     <h5>{{ post.dateTimeStamp }}</h5>
                 </div>
                 <ul class="nav nav-pills" style="margin-bottom: 30px;">
 
-                    <li role="presentation"><a href="{% url 'posts:reply' post.messageId %}">Add Reply</a></li>
+                    <li role="presentation"><a href="{% url 'posts:reply' post.Collaborate_Messaging_A00_Rec %}">Add Reply</a></li>
                 </ul>
             </div>
 
@@ -31,7 +31,7 @@
                         <p><strong>{{ error_message }}</strong></p>
                     {% endif %}
 
-                    {% for post in post.post_set.all %}
+                    {% for post in post.Collaborate_Messaging_A00_set.all %}
                         {{ post.message }}<br/>
                     {% endfor %}
 

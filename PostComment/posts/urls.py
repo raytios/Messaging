@@ -1,4 +1,4 @@
-"""PostComment URL Configuration
+"""Messaging URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
+
 from django.urls import path, include, re_path
 from . import views
 
@@ -21,9 +21,9 @@ app_name ='posts'
 
 urlpatterns = [
     path('', views.posts_home, name='index'),
-    path('<int:messageId>/', views.posts_detail, name='detail'),
+    path('<int:Collaborate_Messaging_A00_Rec>/', views.posts_detail, name='detail'),
     path('create/', views.posts_create, name= 'create'),
-    path('<int:messageId>/create_reply/', views.post_reply, name='reply'),
+    path('<int:Collaborate_Messaging_A00_Rec>/create_reply/', views.post_reply, name='reply'),
 
 
 ]

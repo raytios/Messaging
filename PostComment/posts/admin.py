@@ -2,15 +2,15 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Post, Employee
+from .models import Collaborate_Messaging_A00
 
-class PostAdmin(admin.ModelAdmin):
+class Collaborate_Messaging_A00_Admin(admin.ModelAdmin):
     list_display = ["__str__", "dateTimeStamp"]
-    list_filter = ["messageId", "dateTimeStamp"]
-    search_fields = ["message", "messageId"]
+    list_filter = ["Collaborate_Messaging_A00_Rec", "dateTimeStamp"]
+    search_fields = ["message", "Collaborate_Messaging_A00_Rec"]
     class Meta:
-        model = Post
+        model = Collaborate_Messaging_A00
 
 
-admin.site.register(Post, PostAdmin)
-admin.site.register(Employee)
+admin.site.register(Collaborate_Messaging_A00, Collaborate_Messaging_A00_Admin)
+#admin.site.register(Employee)
